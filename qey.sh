@@ -22,6 +22,6 @@
 # download file
 wget -O tmp -q "http://qrng.anu.edu.au/RawChar.php"
 # get the char stream | remove tag and underscores |cut it
-grep -o '.*</td>' tmp | tr -d '</td>_' | cut -c1-${1:-12}
+grep -o '.*</td>' tmp | tr -d '</>_' | cut -c1-${1:-12}
 # cleanup 
 rm tmp
