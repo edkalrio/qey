@@ -20,7 +20,7 @@
 #Why is it written in bash? --because I'm sysadmin, not a programmer.
 
 # download file
-wget -O tmp -q "http://qrng.anu.edu.au/RawChar.php"
+wget -O tmp -q "https://qrng.anu.edu.au/RawChar.php"
 # get the char stream | remove tag and underscores |cut it
 grep -o '.*</td>' tmp | tr -d '</>_' | cut -c1-${1:-12}
 # cleanup 
